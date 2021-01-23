@@ -4,37 +4,38 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  background-color: black;
   color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
+  font-family: sans-serif;
+  /* min-height: 520vh; */
 }
 header {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 header,
 form {
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 form input,
 form button {
-  padding: 0.5rem;
+  padding: .5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
 form button {
-  color: #ff6f47;
-  background: #f7fffe;
+  color:rgb(48, 3, 248);
+  background: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 form button:hover {
-  background: #ff6f47;
+  background: #caad06;
   color: white;
 }
 .todo-container {
@@ -44,19 +45,19 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 40%;
   list-style: none;
 }
 
 .todo {
   margin: 0.5rem;
   background: white;
-  font-size: 1.5rem;
+  font-size: 25px;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .filter-todo {
   padding: 1rem;
@@ -67,7 +68,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background:rgb(48, 3, 248);
   color: white;
   border: none;
   padding: 1rem;
@@ -75,7 +76,7 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: rgb(2, 241, 42);
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -96,7 +97,6 @@ form button:hover {
   opacity: 0.5;
 }
 
-/*CUSTOM SELECTOR */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -108,32 +108,24 @@ select {
   background-image: none;
 }
 
-/* Custom Select */
 .select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
-  font-family: "Poppins", sans-serif;
+  color: rgb(48, 3, 248);
+  font-family: sans-serif;
   cursor: pointer;
   width: 12rem;
 }
-/* Arrow */
 .select::after {
   content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background:rgb(48, 3, 248);
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/
