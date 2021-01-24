@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom';
+import {Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 import Contact from "./Contact";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
@@ -61,7 +61,9 @@ function App() {
       <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
       <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos} />
     </div>
-    <Route path="/contact" component={Contact}/>
+    <Switch>
+    <Route path="/contact" exact component={Contact}/>
+    </Switch>
     </Router>
   );
 }
